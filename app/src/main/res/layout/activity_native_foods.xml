@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_native_foods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#448AFF"
+    tools:context="com.example.tommylee.restaurant.NativeFoods">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/native_amala"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/native_amala"
+            android:onClick="toCart" />
+
+        <TextView
+            android:id="@+id/amala_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/native_amala"
+            android:text="Amala"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/native_fufu"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/native_amala"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/native_fufu"
+            android:onClick="toCart" />
+
+        <TextView
+            android:id="@+id/fufu_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/amala_text_view"
+            android:layout_alignStart="@+id/amala_text_view"
+            android:layout_below="@+id/native_amala"
+            android:layout_marginTop="55dp"
+            android:text="Fufu"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/native_jollof"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/native_fufu"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/native_jollof"
+            android:onClick="toCart" />
+
+        <TextView
+            android:id="@+id/jollof_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fufu_text_view"
+            android:layout_alignStart="@+id/fufu_text_view"
+            android:layout_below="@+id/native_fufu"
+            android:layout_marginTop="51dp"
+            android:text="Jollof Rice"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/native_ofada"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/native_jollof"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/native_ofada"
+            android:onClick="toCart" />
+
+        <TextView
+            android:id="@+id/ofada_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/jollof_text_view"
+            android:layout_alignStart="@+id/jollof_text_view"
+            android:layout_below="@id/native_jollof"
+            android:layout_marginTop="61dp"
+            android:text="Ofada Rice"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/native_porridge"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/native_ofada"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/native_porridge"
+            android:onClick="toCart" />
+
+        <TextView
+            android:id="@+id/porridge_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ofada_text_view"
+            android:layout_alignStart="@+id/ofada_text_view"
+            android:layout_below="@id/native_ofada"
+            android:layout_marginTop="61dp"
+            android:text="Porridge"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

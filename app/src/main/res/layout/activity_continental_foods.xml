@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_continental_foods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#448AFF"
+    tools:context="com.example.tommylee.restaurant.ContinentalFoods">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/continental_grized_roast_ham"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/continental__grized_roast_ham" />
+
+            <TextView
+                android:id="@+id/ham_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:layout_marginTop="65dp"
+                android:layout_toRightOf="@id/continental_grized_roast_ham"
+                android:text="Grized Roast Ham"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/continental_fried_rice"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/continental_grized_roast_ham"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/continental_fried_rice" />
+
+            <TextView
+                android:id="@+id/fried_rice_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ham_text_view"
+                android:layout_alignStart="@+id/ham_text_view"
+                android:layout_below="@+id/continental_grized_roast_ham"
+                android:layout_marginTop="55dp"
+                android:text="Fried Rice"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/continental_pasta_salad"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/continental_fried_rice"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/continental_pasta_salad" />
+
+            <TextView
+                android:id="@+id/pasta_salad_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/fried_rice_text_view"
+                android:layout_alignStart="@+id/fried_rice_text_view"
+                android:layout_below="@+id/continental_fried_rice"
+                android:layout_marginTop="51dp"
+                android:text="Pasta Salad"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/continental_pork_meal"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/continental_pasta_salad"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/continental_pork_meal" />
+
+            <TextView
+                android:id="@+id/pork_meal_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pasta_salad_text_view"
+                android:layout_alignStart="@+id/pasta_salad_text_view"
+                android:layout_below="@id/continental_pasta_salad"
+                android:layout_marginTop="61dp"
+                android:text="Pork Meal"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/continental_rice"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/continental_pork_meal"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/continetal_rice" />
+
+            <TextView
+                android:id="@+id/porridge_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pork_meal_text_view"
+                android:layout_alignStart="@+id/pork_meal_text_view"
+                android:layout_below="@id/continental_pork_meal"
+                android:layout_marginTop="61dp"
+                android:text="Rice"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

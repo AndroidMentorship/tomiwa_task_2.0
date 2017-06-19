@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tommylee.restaurant">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Best Restaurant"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FoodCategories"
+            android:label="Food Categories" />
+        <activity
+            android:name=".NativeFoods"
+            android:label="Native Foods" />
+        <activity
+            android:name=".ContinentalFoods"
+            android:label="Continental Foods" />
+        <activity
+            android:name=".ChineseFoods"
+            android:label="Chinese Foods" />
+        <activity
+            android:name=".Desserts"
+            android:label="Desserts" />
+        <activity
+            android:name=".AddToCart"
+            android:label="Add Food To Cart" />
+        <activity
+            android:name=".CheckCart"
+            android:label="Cart Check-Out" />
+        <activity android:name=".DeliveryDetails"
+            android:label="Delivery Details"/>
+        <activity android:name=".Payment"
+            android:label="Payment"/>
+        <activity android:name=".OrderStatus"
+            android:label="status"></activity>
+
+    </application>
+
+</manifest>

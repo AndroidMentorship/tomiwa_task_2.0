@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chinese_foods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#448AFF"
+    tools:context="com.example.tommylee.restaurant.ChineseFoods">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chinese_emaze"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/chinese_emaze"
+            android:layout_marginLeft="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Emaze"
+            android:layout_toRightOf="@id/chinese_emaze"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="16sp"
+            android:textColor="#000000"
+            android:id="@+id/emaze_text_view" />
+        <ImageView
+            android:id="@+id/chinese_spice"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/chinese_spice"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/chinese_emaze"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Spice"
+            android:textColor="#000000"
+            android:id="@+id/spice_text_view"
+            android:layout_below="@+id/chinese_emaze"
+            android:layout_alignLeft="@+id/emaze_text_view"
+            android:layout_alignStart="@+id/emaze_text_view"
+            android:layout_marginTop="55dp" />
+        <ImageView
+            android:id="@+id/chinese_fried_pork"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/chinese_stir_fried_pork_dish"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/chinese_spice"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Stir Fried Pork"
+            android:textColor="#000000"
+            android:id="@+id/fried_pork_text_view"
+            android:layout_marginTop="51dp"
+            android:layout_below="@+id/chinese_spice"
+            android:layout_alignLeft="@+id/spice_text_view"
+            android:layout_alignStart="@+id/spice_text_view" />
+        <ImageView
+            android:id="@+id/chinese_tsao_chicken"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/chinese_tsao_chicken"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/chinese_fried_pork"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Tsao Chicken"
+            android:textColor="#000000"
+            android:id="@+id/pork_meal_text_view"
+            android:layout_below="@id/chinese_fried_pork"
+            android:layout_alignLeft="@+id/fried_pork_text_view"
+            android:layout_alignStart="@+id/fried_pork_text_view"
+            android:layout_marginTop="61dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#448AFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="4"
+                android:paddingLeft="16dp"
+                android:text="enter search"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/search" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="70dp"
+            android:layout_weight="7">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/native_dishes"
+                    android:layout_width="150sp"
+                    android:layout_height="180sp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/native_dishes_ones"
+                    android:onClick="toNativeFoods" />
+
+                <TextView
+                    android:id="@+id/native_text_view"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/native_dishes"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="native dishes"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/intercontinental_dishes"
+                    android:layout_width="150sp"
+                    android:layout_height="180sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/intercontinental_dishes"
+                    android:onClick="toContinental" />
+
+                <TextView
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/intercontinental_dishes"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignLeft="@id/intercontinental_dishes"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/native_text_view"
+                    android:gravity="center_horizontal"
+                    android:text="continental dishes"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/chinese_dishes"
+                    android:layout_width="150sp"
+                    android:layout_height="180sp"
+                    android:layout_alignLeft="@+id/chinese_text_view"
+                    android:layout_alignStart="@+id/chinese_text_view"
+                    android:layout_below="@+id/native_text_view"
+                    android:src="@drawable/chinese_dishes"
+                    android:onClick="toChinese" />
+
+                <TextView
+                    android:id="@+id/chinese_text_view"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chinese_dishes"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="chinese dishes"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/desserts"
+                    android:layout_width="150sp"
+                    android:layout_height="180sp"
+                    android:layout_alignLeft="@+id/intercontinental_dishes"
+                    android:layout_alignStart="@+id/intercontinental_dishes"
+                    android:layout_alignTop="@+id/chinese_dishes"
+                    android:src="@drawable/dessert"
+                    android:onClick="toDessert" />
+
+                <TextView
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desserts"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignLeft="@id/desserts"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/chinese_text_view"
+                    android:gravity="center_horizontal"
+                    android:text="desserts"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:src="@drawable/cart"
+        android:onClick="toCart" />
+
+</RelativeLayout>
