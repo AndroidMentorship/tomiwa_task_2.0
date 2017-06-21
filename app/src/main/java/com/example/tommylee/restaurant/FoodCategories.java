@@ -7,12 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class FoodCategories extends AppCompatActivity {
-    String foodName;
-    int foodPrice;
-    String foodDescription;
-    String deliveryAddress;
-    String deliveryCity;
-    int phoneNO;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +28,6 @@ public class FoodCategories extends AppCompatActivity {
     }
     public void toDessert(View view) {
         Intent i = new Intent(getApplicationContext(), Desserts.class);
-        startActivity(i);
-    }
-    public void toCart(View view) {
-        Intent i = new Intent(getApplicationContext(), CheckCart.class);
         startActivity(i);
     }
 }

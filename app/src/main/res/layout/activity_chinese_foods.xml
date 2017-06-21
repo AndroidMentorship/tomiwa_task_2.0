@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#448AFF"
+    android:background="#F44336"
     tools:context="com.example.tommylee.restaurant.ChineseFoods">
 
     <RelativeLayout
@@ -78,12 +78,12 @@
             android:layout_below="@id/chinese_fried_pork"/>
 
         <TextView
+            android:id="@+id/tsao_chicken_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:text="Tsao Chicken"
             android:textColor="#000000"
-            android:id="@+id/pork_meal_text_view"
             android:layout_below="@id/chinese_fried_pork"
             android:layout_alignLeft="@+id/fried_pork_text_view"
             android:layout_alignStart="@+id/fried_pork_text_view"

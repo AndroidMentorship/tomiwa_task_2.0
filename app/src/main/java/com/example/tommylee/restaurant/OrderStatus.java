@@ -12,7 +12,7 @@ public class OrderStatus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_status);
     }
-    public void toCategories(View view) {
+    public void toFoodCategories(View view) {
         Intent i = new Intent(getApplicationContext(), FoodCategories.class);
         startActivity(i);
     }

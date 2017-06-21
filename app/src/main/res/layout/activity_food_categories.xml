@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#448AFF">
+    android:background="#F44336">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
                 android:layout_weight="4"
                 android:paddingLeft="16dp"
                 android:text="enter search"
+                android:textColor="#ffff"
                 android:textSize="20dp" />
 
             <ImageView
@@ -46,7 +47,7 @@
                 <ImageView
                     android:id="@+id/native_dishes"
                     android:layout_width="150sp"
-                    android:layout_height="180sp"
+                    android:layout_height="150sp"
                     android:layout_marginLeft="8dp"
                     android:src="@drawable/native_dishes_ones"
                     android:onClick="toNativeFoods" />
@@ -55,17 +56,17 @@
                     android:id="@+id/native_text_view"
                     android:layout_width="150sp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/native_dishes"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
                     android:text="native dishes"
                     android:textColor="#000000"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:layout_below="@+id/native_dishes" />
 
                 <ImageView
                     android:id="@+id/intercontinental_dishes"
                     android:layout_width="150sp"
-                    android:layout_height="180sp"
+                    android:layout_height="150sp"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
                     android:src="@drawable/intercontinental_dishes"
@@ -88,7 +89,7 @@
                 <ImageView
                     android:id="@+id/chinese_dishes"
                     android:layout_width="150sp"
-                    android:layout_height="180sp"
+                    android:layout_height="150sp"
                     android:layout_alignLeft="@+id/chinese_text_view"
                     android:layout_alignStart="@+id/chinese_text_view"
                     android:layout_below="@+id/native_text_view"
@@ -109,7 +110,8 @@
                 <ImageView
                     android:id="@+id/desserts"
                     android:layout_width="150sp"
-                    android:layout_height="180sp"
+                    android:layout_height="150sp"
+
                     android:layout_alignLeft="@+id/intercontinental_dishes"
                     android:layout_alignStart="@+id/intercontinental_dishes"
                     android:layout_alignTop="@+id/chinese_dishes"
@@ -135,15 +137,5 @@
         </ScrollView>
 
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:src="@drawable/cart"
-        android:onClick="toCart" />
 
 </RelativeLayout>

@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#448AFF"
+    android:background="#F44336"
     tools:context="com.example.tommylee.restaurant.CheckCart">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,30 +22,30 @@
             android:layout_marginTop="8dp"
             android:src="@drawable/native_amala"/>
         <TextView
-            android:id="@+id/cart_item_text_view"
+            android:id="@+id/cart_item_text_views"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/check_cart_amala"
-            android:text="Amala"
+            android:text="XXXXX"
             android:textSize="18dp"
             android:textColor="#000000"
             android:layout_marginTop="25dp"
             android:layout_marginLeft="8dp"/>
-        <Spinner
-            android:id="@+id/spinner1"
+        <TextView
+            android:id="@+id/price_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:layout_below="@id/cart_item_text_view"
+            android:text="XXXXX"
+            android:layout_below="@id/cart_item_text_views"
             android:layout_toRightOf="@id/check_cart_amala"
             android:layout_marginTop="4sp"
-            android:layout_marginLeft="8dp"
-            android:spinnerMode="dropdown" />
-        <EditText
+            android:layout_marginLeft="8dp" />
+        <TextView
+            android:id="@+id/description_text_views"
+            android:background="#ffff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/check_cart_amala"
-            android:text="food description..."
             android:layout_marginTop="10dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"/>

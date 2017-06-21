@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#448AFF"
+    android:background="#F44336"
     tools:context="com.example.tommylee.restaurant.Payment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,6 +48,7 @@
             android:textColor="#000000"
             android:layout_marginLeft="4dp"/>
         <EditText
+            android:background="#ffff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="4dp"
@@ -77,6 +78,7 @@
             android:textColor="#000000"
             android:layout_marginLeft="8dp"/>
         <EditText
+            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="mm"
@@ -93,6 +95,7 @@
             android:textColor="#000000"
             android:layout_marginLeft="4dp"/>
         <EditText
+            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="yy"
@@ -118,6 +121,7 @@
             android:layout_marginLeft="4dp"/>
 
         <EditText
+            android:background="#ffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
