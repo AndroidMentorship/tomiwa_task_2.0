@@ -23,7 +23,7 @@ import static com.example.tommylee.restaurant.R.id.ofada_text_view;
 import static com.example.tommylee.restaurant.R.id.porridge_text_view;
 
 public class NativeFoods extends AppCompatActivity {
-    public ImageView b1,b2,b3,b4,b5;
+    //public ImageView b1,b2,b3,b4,b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +31,98 @@ public class NativeFoods extends AppCompatActivity {
         setContentView(R.layout.activity_native_foods);
 
 
-        b1 = (ImageView) findViewById(R.id.native_amala);
-        b2 = (ImageView) findViewById(R.id.native_fufu);
-        b3 = (ImageView) findViewById(R.id.native_jollof);
-        b4 = (ImageView) findViewById(R.id.native_ofada);
-        b5 = (ImageView) findViewById(R.id.native_porridge);
+        // b1 = (ImageView) findViewById(R.id.native_amala);
+        //b2 = (ImageView) findViewById(R.id.native_fufu);
+        //b3 = (ImageView) findViewById(R.id.native_jollof);
+        //b4 = (ImageView) findViewById(R.id.native_ofada);
+        //b5 = (ImageView) findViewById(R.id.native_porridge);
+    }
 
-        b1.setOnClickListener(new View.OnClickListener(){
+    public void amalaToCart(View v) {
+        TextView foodName = (TextView) findViewById(R.id.amala_text_view);
+        Intent intent = new Intent(NativeFoods.this, AddToCart.class);
+        intent.putExtra("fname", foodName.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.native_amala);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+
+    public void fufuToCart(View v) {
+        TextView foodName = (TextView) findViewById(R.id.fufu_text_view);
+        Intent intent = new Intent(NativeFoods.this,AddToCart.class);
+        intent.putExtra("fname",foodName.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.native_fufu);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        //Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.id.native_fufu);
+        //intent.putExtra("bmp_img", bmp);
+
+        startActivity(intent);
+    }
+
+    public void jollofToCart(View v) {
+        TextView foodName = (TextView) findViewById(R.id.jollof_text_view);
+        Intent intent = new Intent(NativeFoods.this,AddToCart.class);
+        intent.putExtra("fname",foodName.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.native_jollof);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+
+        startActivity(intent);
+
+    }
+
+    public void ofadaToCart(View v) {
+        TextView foodName = (TextView) findViewById(R.id.ofada_text_view);
+        Intent intent = new Intent(NativeFoods.this,AddToCart.class);
+        intent.putExtra("fname",foodName.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.native_ofada);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+
+    public void porridgeToCart(View v) {
+        TextView foodName = (TextView) findViewById(R.id.porridge_text_view);
+        Intent intent = new Intent(NativeFoods.this,AddToCart.class);
+        intent.putExtra("fname",foodName.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.native_porridge);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+
+
+       /* b1.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
@@ -142,5 +227,5 @@ public class NativeFoods extends AppCompatActivity {
 
         });
 
-    }
+    }*/
 }

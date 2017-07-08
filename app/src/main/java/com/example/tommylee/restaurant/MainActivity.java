@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void toCategories(View view) {
-        Intent i = new Intent(getApplicationContext(), FoodCategories.class);
+        Intent i = new Intent(getApplicationContext(), FoodCategories2.class);
         startActivity(i);
     }
 }

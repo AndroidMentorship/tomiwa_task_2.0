@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FoodCategories"
-            android:label="Food Categories" />
+            android:name=".FoodCategories2"
+            android:label="Categories" />
         <activity
             android:name=".NativeFoods"
             android:label="Native Foods" />
@@ -36,13 +36,12 @@
         <activity
             android:name=".CheckCart"
             android:label="Cart Check-Out" />
-        <activity android:name=".DeliveryDetails"
-            android:label="Delivery Details"/>
-        <activity android:name=".Payment"
-            android:label="Payment"/>
-        <activity android:name=".OrderStatus"
-            android:label="status"></activity>
-
+        <activity
+            android:name=".Payment"
+            android:label="Payment" />
+        <activity
+            android:name=".OrderStatus"
+            android:label="status" />
     </application>
 
 </manifest>

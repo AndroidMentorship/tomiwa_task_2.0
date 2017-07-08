@@ -12,14 +12,76 @@ import android.widget.TextView;
 import java.io.ByteArrayOutputStream;
 
 public class Desserts extends AppCompatActivity {
-    public ImageView b1,b2,b3,b4,b5;
+    //public ImageView b1,b2,b3,b4,b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desserts);
+    }
 
-        b1 = (ImageView) findViewById(R.id.dessert_apple_rose);
+    public void roseToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.apple_rose_text_view);
+        Intent intent = new Intent(Desserts.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dessert_apple_rose_mini_tarts);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+    public void brandyToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.brandy_text_view);
+        Intent intent = new Intent(Desserts.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dessert_brandy);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+    public void chocolateToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.chocolate_text_view);
+        Intent intent = new Intent(Desserts.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dessert_chocolate);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+    public void milkyToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.miilky_chocolate_text_view);
+        Intent intent = new Intent(Desserts.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.desserts);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+
+     /*   b1 = (ImageView) findViewById(R.id.dessert_apple_rose);
         b2 = (ImageView) findViewById(R.id.dessert_brandy);
         b3 = (ImageView) findViewById(R.id.dessert_chocolate);
         b4 = (ImageView) findViewById(R.id.desserts_milky);
@@ -104,5 +166,5 @@ public class Desserts extends AppCompatActivity {
             }
 
         });
-    }
+    }*/
 }

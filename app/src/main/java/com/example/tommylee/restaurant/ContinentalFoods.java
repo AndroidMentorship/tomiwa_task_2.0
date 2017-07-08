@@ -13,14 +13,90 @@ import java.io.ByteArrayOutputStream;
 
 public class ContinentalFoods extends AppCompatActivity {
 
-    public ImageView b1,b2,b3,b4,b5;
+    //public ImageView b1,b2,b3,b4,b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_continental_foods);
+    }
 
-        b1 = (ImageView) findViewById(R.id.continental_grized_roast_ham);
+    public void hamToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.ham_text_view);
+        Intent intent = new Intent(ContinentalFoods.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.continental__grized_roast_ham);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+    }
+    public void friedRiceToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.fried_rice_text_view);
+        Intent intent = new Intent(ContinentalFoods.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.continental_fried_rice);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+    public void pastaToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.pasta_salad_text_view);
+        Intent intent = new Intent(ContinentalFoods.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.continental_pasta_salad);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+    public void porkToCart(View v) {
+        TextView foodName1 = (TextView) findViewById(R.id.pork_meal_text_view);
+        Intent intent = new Intent(ContinentalFoods.this, AddToCart.class);
+        intent.putExtra("fname", foodName1.getText().toString());
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.continental_pork_meal);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+
+        intent.putExtra("picture", b);
+
+        startActivity(intent);
+
+    }
+    public void riceToCart(View v) {
+            TextView foodName1 = (TextView) findViewById(R.id.rice_text_view);
+            Intent intent = new Intent(ContinentalFoods.this, AddToCart.class);
+            intent.putExtra("fname", foodName1.getText().toString());
+
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.continetal_rice);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+            byte[] b = baos.toByteArray();
+
+            intent.putExtra("picture", b);
+
+            startActivity(intent);
+
+    }
+        /*b1 = (ImageView) findViewById(R.id.continental_grized_roast_ham);
         b2 = (ImageView) findViewById(R.id.continental_fried_rice);
         b3 = (ImageView) findViewById(R.id.continental_pasta_salad);
         b4 = (ImageView) findViewById(R.id.continental_pork_meal);
@@ -126,8 +202,7 @@ public class ContinentalFoods extends AppCompatActivity {
                 startActivity(intent);
             }
 
-        });
+        });*/
 
-    }
     }
 

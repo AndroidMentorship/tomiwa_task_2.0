@@ -8,116 +8,215 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#F44336"
+    android:background="#ef9a9a"
     tools:context="com.example.tommylee.restaurant.ContinentalFoods">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8sp"
+            android:background="#fff"
+            android:onClick="hamToCart"
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/continental_grized_roast_ham"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="8dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:onClick="hamToCart"
                 android:src="@drawable/continental__grized_roast_ham" />
 
             <TextView
                 android:id="@+id/ham_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16sp"
-                android:layout_marginTop="65dp"
-                android:layout_toRightOf="@id/continental_grized_roast_ham"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/continental_grized_roast_ham"
+                android:onClick="hamToCart"
+                android:paddingTop="16sp"
                 android:text="Grized Roast Ham"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ham_text_view"
+                android:layout_toRightOf="@+id/continental_grized_roast_ham"
+                android:onClick="hamToCart"
+                android:text="continental meal with ham roasted tastefully" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="4dp"
+            android:onClick="friedRiceToCart"
+            android:layout_marginBottom="8sp">
 
             <ImageView
                 android:id="@+id/continental_fried_rice"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/continental_grized_roast_ham"
-                android:layout_marginLeft="8dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:onClick="friedRiceToCart"
                 android:src="@drawable/continental_fried_rice" />
 
             <TextView
                 android:id="@+id/fried_rice_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ham_text_view"
-                android:layout_alignStart="@+id/ham_text_view"
-                android:layout_below="@+id/continental_grized_roast_ham"
-                android:layout_marginTop="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/continental_fried_rice"
+                android:onClick="friedRiceToCart"
+                android:paddingTop="16sp"
                 android:text="Fried Rice"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fried_rice_text_view"
+                android:layout_toRightOf="@+id/continental_fried_rice"
+                android:onClick="friedRiceToCart"
+                android:text="tastefull meal for hen on the go, still this food has nothing on the nigerian jollof rice" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="4dp"
+            android:onClick="pastaToCart"
+            android:layout_marginBottom="8sp">
 
             <ImageView
                 android:id="@+id/continental_pasta_salad"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/continental_fried_rice"
-                android:layout_marginLeft="8dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:onClick="pastaToCart"
                 android:src="@drawable/continental_pasta_salad" />
 
             <TextView
                 android:id="@+id/pasta_salad_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/fried_rice_text_view"
-                android:layout_alignStart="@+id/fried_rice_text_view"
-                android:layout_below="@+id/continental_fried_rice"
-                android:layout_marginTop="51dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/continental_pasta_salad"
+                android:onClick="pastaToCart"
+                android:paddingTop="16sp"
                 android:text="Pasta Salad"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pasta_salad_text_view"
+                android:layout_toRightOf="@+id/continental_pasta_salad"
+                android:onClick="pastaToCart"
+                android:text="pasta with salad usually served cold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="4dp"
+            android:onClick="porkToCart"
+            android:layout_marginBottom="8sp">
 
             <ImageView
                 android:id="@+id/continental_pork_meal"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/continental_pasta_salad"
-                android:layout_marginLeft="8dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:onClick="porkToCart"
                 android:src="@drawable/continental_pork_meal" />
 
             <TextView
                 android:id="@+id/pork_meal_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/pasta_salad_text_view"
-                android:layout_alignStart="@+id/pasta_salad_text_view"
-                android:layout_below="@id/continental_pasta_salad"
-                android:layout_marginTop="61dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/continental_pork_meal"
+                android:onClick="porkToCart"
+                android:paddingTop="16sp"
                 android:text="Pork Meal"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pork_meal_text_view"
+                android:layout_toRightOf="@+id/continental_pork_meal"
+                android:onClick="porkToCart"
+                android:text="grilled pork with vegetables high in fate but healthy" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="4dp"
+            android:onClick="riceToCart"
+            android:layout_marginBottom="8sp">
 
             <ImageView
                 android:id="@+id/continental_rice"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/continental_pork_meal"
-                android:layout_marginLeft="8dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:onClick="riceToCart"
                 android:src="@drawable/continetal_rice" />
 
             <TextView
                 android:id="@+id/rice_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/pork_meal_text_view"
-                android:layout_alignStart="@+id/pork_meal_text_view"
-                android:layout_below="@id/continental_pork_meal"
-                android:layout_marginTop="61dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/continental_rice"
+                android:onClick="riceToCart"
+                android:paddingTop="16sp"
                 android:text="Rice"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rice_text_view"
+                android:layout_toRightOf="@+id/continental_rice"
+                android:onClick="riceToCart"
+                android:text="rice carefully prepared with tasty sauce" />
 
         </RelativeLayout>
-    </RelativeLayout>
+
+
+    </LinearLayout>
 
 </ScrollView>

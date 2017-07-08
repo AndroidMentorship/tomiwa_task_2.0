@@ -1,12 +1,17 @@
 package com.example.tommylee.restaurant;
 
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.Signature;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -24,12 +29,21 @@ public class AddToCart extends AppCompatActivity{
 
     TextView foodView;
 
+
     public Button be;
+    public ImageView cart_be;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_to_cart);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(true);
+
+        LayoutInflater inflator = (LayoutInflater) this .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflator.inflate(R.layout.custom_imageview, null);
+
+        actionBar.setCustomView(v);
 
         Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
         String[] items = new String[]{"N1000", "N1500", "N2000"};
@@ -38,6 +52,7 @@ public class AddToCart extends AppCompatActivity{
 
 
         be = (Button) findViewById(R.id.add_to_cart_button);
+        cart_be = (ImageView) findViewById(R.id.cart_image_1);
 
 
         foodView = (TextView) findViewById(R.id.cart_item_text_view);
@@ -61,6 +76,35 @@ public class AddToCart extends AppCompatActivity{
 
 
         be.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+
+                TextView cartFName = (TextView) findViewById(R.id.cart_item_text_view);
+                Spinner price = (Spinner) findViewById(R.id.spinner1);
+                EditText description = (EditText) findViewById(R.id.description_text);
+                Intent intent = new Intent(AddToCart.this,CheckCart.class);
+                intent.putExtra("foodname",cartFName.getText().toString());
+                intent.putExtra("foodprice",price.getSelectedItem().toString());
+                intent.putExtra("fooddescription",description.getText().toString());
+
+                ImageView imgPreview =(ImageView) findViewById(R.id.cart_amala) ;
+
+                Bitmap bitmap = ((BitmapDrawable) imgPreview.getDrawable()).getBitmap();
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                byte[] b = baos.toByteArray();
+
+                intent.putExtra("picture", b);
+                Toast.makeText(AddToCart.this, "You Added Item To Cart", Toast.LENGTH_SHORT).show();
+
+                //startActivity(intent);
+            }
+
+        });
+
+
+        cart_be.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){

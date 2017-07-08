@@ -9,18 +9,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#F44336"
+    android:background="#ef9a9a"
     tools:context="com.example.tommylee.restaurant.CheckCart">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5">
-        <ImageView
+        android:layout_weight="1.8">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/check_cart_amala"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:civ_border_width="2dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="2sp"
+            android:gravity="center_horizontal"
+            app:civ_border_color="#ffffff"
+            android:layout_marginBottom="2sp"/>
+        <!--<ImageView
             android:id="@+id/check_cart_amala"
             android:layout_width="160sp"
             android:layout_height="110sp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/native_amala"/>
+            android:src="@drawable/native_amala"/>-->
         <TextView
             android:id="@+id/cart_item_text_views"
             android:layout_width="wrap_content"
@@ -36,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="XXXXX"
+            android:textSize="15dp"
             android:layout_below="@id/cart_item_text_views"
             android:layout_toRightOf="@id/check_cart_amala"
             android:layout_marginTop="4sp"
@@ -44,9 +56,10 @@
             android:id="@+id/description_text_views"
             android:background="#ffff"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:layout_height="70sp"
             android:layout_below="@id/check_cart_amala"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"/>
 
@@ -54,15 +67,97 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="2.1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Delivery Address"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:background="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:id="@+id/editText5"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:background="#ffff"
+                android:layout_width="90sp"
+                android:layout_height="40sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:id="@+id/editText6"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Phone No"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="phone"
+                android:background="#ffff"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="confirm order"
+            android:text="make payment"
             android:layout_gravity="center"
             android:layout_marginLeft="65sp"
             android:layout_marginRight="65sp"
-            android:onClick="toDeliveryDetails" />
+            android:onClick="toPayment" />
 
     </LinearLayout>
 
