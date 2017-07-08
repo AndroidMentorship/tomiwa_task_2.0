@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 public class FoodCategories2 extends AppCompatActivity {
 
-    boolean doubleBackToExitPressedOnce = false;
-
 
     GridView grid;
     String[] web = {
@@ -44,7 +42,7 @@ public class FoodCategories2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(FoodCategories2.this, "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(FoodCategories2.this, "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
 
                 if (position == 0) {
                     Intent i = new Intent(getApplicationContext(), NativeFoods.class);
@@ -66,27 +64,27 @@ public class FoodCategories2 extends AppCompatActivity {
         });
 
     }
-    public void toCheckCart(View view) {
+    /*public void toCheckCart(View view) {
         Intent i = new Intent(getApplicationContext(), CheckCart.class);
         startActivity(i);
+    }*/
+
+    public void toSearch(View view) {
+        Toast.makeText(this, "can not retrive information now", Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
+
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 1) {
             super.onBackPressed();
-            return;
+           // Toast.makeText(this, "Can not go back at this stage", Toast.LENGTH_SHORT).show();
+        } else {
+            getFragmentManager().popBackStack();
         }
 
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
-            }
-        }, 2000);
     }
 }
