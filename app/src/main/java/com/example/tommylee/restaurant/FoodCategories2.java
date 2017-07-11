@@ -78,10 +78,10 @@ public class FoodCategories2 extends AppCompatActivity {
     public void onBackPressed() {
 
         int count = getFragmentManager().getBackStackEntryCount();
+        Toast.makeText(this, "Can not go back at this stage", Toast.LENGTH_SHORT).show();
 
         if (count == 1) {
             super.onBackPressed();
-           // Toast.makeText(this, "Can not go back at this stage", Toast.LENGTH_SHORT).show();
         } else {
             getFragmentManager().popBackStack();
         }
