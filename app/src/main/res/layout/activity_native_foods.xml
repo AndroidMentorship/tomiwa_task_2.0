@@ -4,7 +4,7 @@
     android:id="@+id/activity_native_foods"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ef9a9a"
+    android:background="#ffff"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8sp"
             android:onClick="amalaToCart"
-            android:background="#fff"
             android:padding="4dp">
 
             <ImageView
@@ -48,19 +47,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/amala_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/amala_text_view"
                 android:layout_toRightOf="@+id/native_amala"
                 android:onClick="amalaToCart"
                 android:text="native yoruba meal containing starch...." />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amala_details"
+                android:layout_toRightOf="@+id/native_amala"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="fufuToCart"
             android:layout_marginBottom="8sp">
@@ -88,19 +95,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/fufu_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fufu_text_view"
                 android:layout_toRightOf="@+id/native_fufu"
                 android:onClick="fufuToCart"
-                android:text="igbo meal for that time you want to be filed to the brim" />
+                android:text="igbo meal for that time you want to be filled to the brim" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fufu_details"
+                android:layout_toRightOf="@+id/native_fufu"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="jollofToCart"
             android:layout_marginBottom="8sp">
@@ -128,19 +143,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/jollof_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jollof_text_view"
                 android:layout_toRightOf="@+id/native_jollof"
                 android:onClick="jollofToCart"
                 android:text="ancient nigerian meal known to cause african twitter e-wars" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jollof_details"
+                android:layout_toRightOf="@+id/native_jollof"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="ofadaToCart"
             android:layout_marginBottom="8sp">
@@ -168,19 +191,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/ofada_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ofada_text_view"
                 android:layout_toRightOf="@+id/native_ofada"
                 android:onClick="ofadaToCart"
                 android:text="native to Nigerians, local rice with tasty sauce" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ofada_details"
+                android:layout_toRightOf="@+id/native_ofada"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="porridgeToCart"
             android:layout_marginBottom="8sp">
@@ -208,12 +239,14 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/porridge_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/porridge_text_view"
                 android:layout_toRightOf="@+id/native_porridge"
                 android:onClick="porridgeToCart"
                 android:text="porridge consisting of yam prepared tastefully" />
+
 
         </RelativeLayout>
 

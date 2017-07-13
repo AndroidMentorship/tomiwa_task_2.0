@@ -69,11 +69,6 @@ public class FoodCategories2 extends AppCompatActivity {
         startActivity(i);
     }*/
 
-    public void toSearch(View view) {
-        Toast.makeText(this, "can not retrive information now", Toast.LENGTH_SHORT).show();
-    }
-
-
     @Override
     public void onBackPressed() {
 

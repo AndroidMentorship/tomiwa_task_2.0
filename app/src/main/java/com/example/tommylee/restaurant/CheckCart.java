@@ -1,10 +1,12 @@
 package com.example.tommylee.restaurant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -20,6 +22,12 @@ public class CheckCart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_cart);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(true);
+
+        LayoutInflater inflator = (LayoutInflater) this .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflator.inflate(R.layout.custom_imageview, null);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         foodViews = (TextView) findViewById(R.id.cart_item_text_views);
         priceViews = (TextView) findViewById(R.id.price_text_view);
         descriptionViews = (TextView) findViewById(R.id.description_text_views);
@@ -39,6 +47,11 @@ public class CheckCart extends AppCompatActivity {
 
         image.setImageBitmap(bmp);
 
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     public void toPayment(View view) {

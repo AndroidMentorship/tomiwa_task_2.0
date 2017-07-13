@@ -2,14 +2,17 @@ package com.example.tommylee.restaurant;
 
 import android.app.ActionBar;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.Signature;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.Image;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +47,7 @@ public class AddToCart extends AppCompatActivity{
         View v = inflator.inflate(R.layout.custom_imageview, null);
 
         actionBar.setCustomView(v);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
         String[] items = new String[]{"N1000", "N1500", "N2000"};
@@ -76,29 +80,38 @@ public class AddToCart extends AppCompatActivity{
 
 
         be.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                new AlertDialog.Builder(AddToCart.this)
+                        .setTitle( "Add Item" )
+                        .setMessage( "Add item to cart?" )
+                        .setPositiveButton( "Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Log.d( "AlertDialog", "Positive" );
+                                TextView cartFName = (TextView) findViewById(R.id.cart_item_text_view);
+                                Spinner price = (Spinner) findViewById(R.id.spinner1);
+                                EditText description = (EditText) findViewById(R.id.description_text);
+                                Intent intent = new Intent(AddToCart.this,CheckCart.class);
+                                intent.putExtra("foodname",cartFName.getText().toString());
+                                intent.putExtra("foodprice",price.getSelectedItem().toString());
+                                intent.putExtra("fooddescription",description.getText().toString());
 
-            @Override
-            public void onClick(View view){
+                                ImageView imgPreview =(ImageView) findViewById(R.id.cart_amala) ;
 
-                TextView cartFName = (TextView) findViewById(R.id.cart_item_text_view);
-                Spinner price = (Spinner) findViewById(R.id.spinner1);
-                EditText description = (EditText) findViewById(R.id.description_text);
-                Intent intent = new Intent(AddToCart.this,CheckCart.class);
-                intent.putExtra("foodname",cartFName.getText().toString());
-                intent.putExtra("foodprice",price.getSelectedItem().toString());
-                intent.putExtra("fooddescription",description.getText().toString());
+                                Bitmap bitmap = ((BitmapDrawable) imgPreview.getDrawable()).getBitmap();
+                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                                byte[] b = baos.toByteArray();
 
-                ImageView imgPreview =(ImageView) findViewById(R.id.cart_amala) ;
-
-                Bitmap bitmap = ((BitmapDrawable) imgPreview.getDrawable()).getBitmap();
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-                byte[] b = baos.toByteArray();
-
-                intent.putExtra("picture", b);
-                Toast.makeText(AddToCart.this, "You Added Item To Cart", Toast.LENGTH_SHORT).show();
-
-                //startActivity(intent);
+                                intent.putExtra("picture", b);
+                                Toast.makeText(AddToCart.this, "You Added Item To Cart", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton( "No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Log.d( "AlertDialog", "Negative" );
+                            }
+                        } )
+                        .show();
             }
 
         });
@@ -132,6 +145,11 @@ public class AddToCart extends AppCompatActivity{
         });
 
 
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }
 

@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ef9a9a"
+    android:background="#ffff"
     tools:context="com.example.tommylee.restaurant.OrderStatus">
 
     <LinearLayout
@@ -34,12 +34,14 @@
         android:layout_weight="1">
 
         <Button
+            android:background="#E57373"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="home"
-            android:layout_marginLeft="65sp"
-            android:layout_marginRight="65sp"
+            android:textColor="#ffff"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
             android:onClick="toFoodCategories" />
 
 

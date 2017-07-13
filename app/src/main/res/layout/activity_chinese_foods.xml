@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ef9a9a"
+    android:background="#ffff"
     tools:context="com.example.tommylee.restaurant.ChineseFoods">
 
     <LinearLayout
@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8sp"
-            android:background="#fff"
             android:onClick="emazeToCart"
             android:padding="4dp">
 
@@ -47,19 +46,26 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/emaze_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/emaze_text_view"
                 android:layout_toRightOf="@+id/chinese_emaze"
                 android:onClick="emazeToCart"
                 android:text="traditional chinese meal comprising of spaghetti and vegetables usually eaten with the chop-sticks" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emaze_details"
+                android:layout_toRightOf="@+id/chinese_emaze"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="spiceToCart"
             android:layout_marginBottom="8sp">
@@ -87,19 +93,26 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/spice_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/spice_text_view"
                 android:layout_toRightOf="@+id/chinese_spice"
                 android:onClick="spiceToCart"
                 android:text="tasty chinese soup known for its additional health benefits" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spice_details"
+                android:layout_toRightOf="@+id/chinese_spice"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="friedPorkToCart"
             android:layout_marginBottom="8sp">
@@ -127,19 +140,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/pork_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fried_pork_text_view"
                 android:layout_toRightOf="@+id/chinese_fried_pork"
                 android:onClick="friedPorkToCart"
                 android:text="deep fried pork with sauce " />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pork_details"
+                android:layout_toRightOf="@+id/chinese_fried_pork"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="tsaoToCart"
             android:layout_marginBottom="8sp">
@@ -167,12 +188,21 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/tsao_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tsao_chicken_text_view"
                 android:layout_toRightOf="@+id/chinese_tsao_chicken"
                 android:onClick="tsaoToCart"
                 android:text="chinese tsao chicken with vegetables perfect for lunch" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tsao_details"
+                android:layout_toRightOf="@+id/chinese_tsao_chicken"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 

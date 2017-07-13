@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ef9a9a"
+    android:background="#ffff"
     tools:context="com.example.tommylee.restaurant.Desserts">
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8sp"
-            android:background="#fff"
             android:onClick="roseToCart"
             android:padding="4dp">
 
@@ -46,19 +45,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/apple_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/apple_rose_text_view"
                 android:layout_toRightOf="@+id/dessert_apple_rose"
                 android:onClick="roseToCart"
                 android:text="light food that can be eaten on the go " />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apple_details"
+                android:layout_toRightOf="@+id/dessert_apple_rose"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="brandyToCart"
             android:layout_marginBottom="8sp">
@@ -86,19 +93,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/brandy_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/brandy_text_view"
                 android:layout_toRightOf="@+id/dessert_brandy"
                 android:onClick="brandyToCart"
                 android:text="creammy cake laced with brandy wine" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brandy_details"
+                android:layout_toRightOf="@+id/dessert_brandy"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="chocolateToCart"
             android:layout_marginBottom="8sp">
@@ -126,19 +141,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/chocolate_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/chocolate_text_view"
                 android:layout_toRightOf="@+id/dessert_chocolate"
                 android:onClick="chocolateToCart"
                 android:text="chocolate cake made from  the best ingredients " />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chocolate_details"
+                android:layout_toRightOf="@+id/dessert_chocolate"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="milkyToCart"
             android:layout_marginBottom="8sp">
@@ -166,13 +189,21 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/milky_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/miilky_chocolate_text_view"
                 android:layout_toRightOf="@+id/desserts_milky"
                 android:onClick="milkyToCart"
                 android:text="milk and chocolate mixed together to make the best tasting cake yet " />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/milky_details"
+                android:layout_toRightOf="@+id/desserts_milky"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
         </RelativeLayout>
 
     </LinearLayout>

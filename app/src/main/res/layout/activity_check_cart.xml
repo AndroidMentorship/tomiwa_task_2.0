@@ -9,12 +9,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ef9a9a"
+    android:background="#ffff"
     tools:context="com.example.tommylee.restaurant.CheckCart">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.8">
+        android:layout_weight="1.9">
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/check_cart_amala"
@@ -27,12 +27,6 @@
             android:gravity="center_horizontal"
             app:civ_border_color="#ffffff"
             android:layout_marginBottom="2sp"/>
-        <!--<ImageView
-            android:id="@+id/check_cart_amala"
-            android:layout_width="160sp"
-            android:layout_height="110sp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/native_amala"/>-->
         <TextView
             android:id="@+id/cart_item_text_views"
             android:layout_width="wrap_content"
@@ -54,8 +48,11 @@
             android:layout_marginTop="4sp"
             android:layout_marginLeft="8dp" />
         <TextView
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
             android:id="@+id/description_text_views"
+            android:hint="...description text..."
             android:background="#ffff"
+            android:elevation="6sp"
             android:layout_width="match_parent"
             android:textSize="15dp"
             android:layout_height="70sp"
@@ -68,7 +65,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.1"
+        android:layout_weight="2"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -84,11 +81,11 @@
             android:layout_marginLeft="8dp"/>
 
             <EditText
-                android:background="#ffff"
+                style="@style/Widget.AppCompat.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
                 android:inputType="textPostalAddress"
                 android:ems="10"
                 android:id="@+id/editText5"
@@ -110,11 +107,11 @@
                 android:layout_marginLeft="8dp"/>
 
             <EditText
-                android:background="#ffff"
-                android:layout_width="90sp"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
                 android:layout_height="40sp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
                 android:inputType="textPostalAddress"
                 android:ems="10"
                 android:id="@+id/editText6"
@@ -134,15 +131,15 @@
                 android:layout_marginLeft="8dp"/>
 
             <EditText
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:inputType="phone"
-                android:background="#ffff"
                 android:ems="10"
                 android:id="@+id/editText3"
                 android:layout_weight="1"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginRight="16dp"/>
 
         </LinearLayout>
 
@@ -152,12 +149,14 @@
         android:layout_height="0dp"
         android:layout_weight="0.5">
         <Button
+            android:background="#E57373"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="make payment"
+            android:textColor="#ffff"
             android:layout_gravity="center"
-            android:layout_marginLeft="65sp"
-            android:layout_marginRight="65sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
             android:onClick="toPayment" />
 
     </LinearLayout>

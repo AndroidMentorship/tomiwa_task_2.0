@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#ef9a9a"
+    android:background="#ffff"
     tools:context="com.example.tommylee.restaurant.ContinentalFoods">
 
     <LinearLayout
@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8sp"
-            android:background="#fff"
             android:onClick="hamToCart"
             android:padding="4dp">
 
@@ -47,19 +46,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/ham_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ham_text_view"
                 android:layout_toRightOf="@+id/continental_grized_roast_ham"
                 android:onClick="hamToCart"
                 android:text="continental meal with ham roasted tastefully" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ham_details"
+                android:layout_toRightOf="@+id/continental_grized_roast_ham"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="friedRiceToCart"
             android:layout_marginBottom="8sp">
@@ -87,19 +94,26 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/fried_rice_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fried_rice_text_view"
                 android:layout_toRightOf="@+id/continental_fried_rice"
                 android:onClick="friedRiceToCart"
                 android:text="tastefull meal for hen on the go, still this food has nothing on the nigerian jollof rice" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fried_rice_details"
+                android:layout_toRightOf="@+id/continental_fried_rice"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="pastaToCart"
             android:layout_marginBottom="8sp">
@@ -127,19 +141,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/salad_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pasta_salad_text_view"
                 android:layout_toRightOf="@+id/continental_pasta_salad"
                 android:onClick="pastaToCart"
                 android:text="pasta with salad usually served cold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/salad_details"
+                android:layout_toRightOf="@+id/continental_pasta_salad"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="porkToCart"
             android:layout_marginBottom="8sp">
@@ -167,19 +189,27 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/pork_meal_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pork_meal_text_view"
                 android:layout_toRightOf="@+id/continental_pork_meal"
                 android:onClick="porkToCart"
                 android:text="grilled pork with vegetables high in fate but healthy" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pork_meal_details"
+                android:layout_toRightOf="@+id/continental_pork_meal"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
             android:padding="4dp"
             android:onClick="riceToCart"
             android:layout_marginBottom="8sp">
@@ -207,12 +237,21 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/rice_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rice_text_view"
                 android:layout_toRightOf="@+id/continental_rice"
                 android:onClick="riceToCart"
                 android:text="rice carefully prepared with tasty sauce" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rice_details"
+                android:layout_toRightOf="@+id/continental_rice"
+                android:onClick="amalaToCart"
+                android:textStyle="bold"
+                android:text="price:N500 per spoon" />
 
         </RelativeLayout>
 

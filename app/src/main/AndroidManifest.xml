@@ -17,19 +17,19 @@
         </activity>
         <activity
             android:name=".FoodCategories2"
-            android:label="Categories" />
+            android:label="Food Categories" />
         <activity
             android:name=".NativeFoods"
-            android:label="Native Foods" />
+            android:label="" />
         <activity
             android:name=".ContinentalFoods"
-            android:label="Continental Foods" />
+            android:label="" />
         <activity
             android:name=".ChineseFoods"
-            android:label="Chinese Foods" />
+            android:label="" />
         <activity
             android:name=".Desserts"
-            android:label="Desserts" />
+            android:label="" />
         <activity
             android:name=".AddToCart"
             android:label="Add Food To Cart" />
